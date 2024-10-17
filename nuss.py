@@ -6,6 +6,8 @@ h = 720
 x = 0
 screen = display.set_mode((w, h), FULLSCREEN)
 display.set_caption('NUSS')
+icono = image.load("nuss_images/icono_nuss.png")
+display.set_icon(icono)
 clock = time.Clock()
 done = False
 background = transform.scale(image.load("nuss_images/background_day.png").convert(), (3480, 720))
@@ -617,7 +619,7 @@ while not done:
 		screen.blit(fantasma2, [plataforma.x, plataforma.y])
 	if plataforma.vidas == 1:
 		screen.blit(fantasma3, [plataforma.x, plataforma.y])
-	if barra.ancho >= 600:
+	if barra.ancho >= 620:
 		level += 1
 		barra.ancho = 0
 	if plataforma.vidas <= 0:
